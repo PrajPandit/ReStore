@@ -6,8 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Router, unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { store } from './app/store/configureStore';
+import { createBrowserHistory } from 'history';
 import { fetchProductsAsync } from './features/catalog/catalogSlice';
 
+
+export const history = createBrowserHistory();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
